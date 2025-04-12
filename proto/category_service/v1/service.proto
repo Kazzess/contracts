@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package category_service.v1;
+
+import "category_service/v1/category.proto";
+
+option go_package = "github.com/Kazzess/Contracts/gen/go/category_service/v1;pb_category_service_v1";
+
+// CategoryService
+service CategoryService {
+  rpc CreateCategory(CreateCategoryRequest) returns (CreateCategoryResponse) {}
+  rpc UpdateCategory(UpdateCategoryRequest) returns (UpdateCategoryResponse) {}
+  rpc SearchCategory(SearchCategoryRequest) returns (SearchCategoryResponse) {}
+}

@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package category_service.v1;
+
+import "category_service/v1/model.proto";
+
+option go_package = "github.com/Kazzess/Contracts/gen/go/category_service/v1;pb_category_service_v1";
+
+message CreateCategoryRequest {
+  string name = 1;
+}
+
+message CreateCategoryResponse {}
+
+message UpdateCategoryRequest {
+  uint64 id = 1;
+  string name = 2;
+  bool is_enabled = 3;
+}
+
+message UpdateCategoryResponse {}
+
+message SearchCategoryRequest {}
+
+message SearchCategoryResponse {
+  repeated Category category = 1;
+}

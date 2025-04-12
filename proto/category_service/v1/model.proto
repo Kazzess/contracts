@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package category_service.v1;
+
+option go_package = "github.com/Kazzess/Contracts/gen/go/category_service/v1;pb_category_service_v1";
+
+message Category {
+  string name = 1;
+  bool is_enabled = 2;
+  int64 created_at = 3;
+  int64 updated_at = 4;
+}
